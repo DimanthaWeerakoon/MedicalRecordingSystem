@@ -30,7 +30,7 @@
             </button>
             <a class="navbar-brand" href="#" role="button"
                th:href="@{/}">
-                Registration and Login - ABC Medical Center
+                Registration and Login | Patient - ABC Medical Center
             </a>
 
         </div>
@@ -46,10 +46,10 @@
         <div class="col-md-6 col-md-offset-3">
             <!-- Success Message -->
             <div th:if="${param.success}">
-                <div class="alert alert--info">You've successfully registered</div>
+                <div class="alert alert--info">Patient successfully registered</div>
             </div>
             <h1>Registration</h1>
-            <form method="post" th:action="@{/registration}" th:object="${patient}">
+            <form method="post" th:action="@{/registration/patient}" th:object="${patient}">
                 <div class="form-group">
                     <label class="control-label" for="firstName">First Name</label>
                     <input autofocus="autofocus " class="form-control" id="firstName" required th:field="*{firstName}"/>

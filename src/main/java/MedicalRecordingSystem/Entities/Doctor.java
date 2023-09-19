@@ -34,4 +34,16 @@ public class Doctor {
     private String qualifications;
     private String reminders;
 
+    public Doctor(String firstName, String lastName, String email, String username, String password, String mobile) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.mobile = mobile;
+    }
+
+    public Doctor() {
+    }
+
 }

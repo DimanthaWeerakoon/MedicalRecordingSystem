@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet">
+</head>
+<body>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Registration</title>-->
+<!--    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
+<!--          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet">-->
+<!--</head>-->
+<!--<body>-->
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed"
+                    data-target="#navbar" data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" role="button"
+               th:href="@{/}">
+                Registration and Login | Doctor - ABC Medical Center
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+<br>
+<br>
+<!-- HTML Registration form -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <!-- Success Message -->
+            <div th:if="${param.success}">
+                <div class="alert alert--info">Doctor successfully registered</div>
+            </div>
+            <h1>Registration</h1>
+            <form method="post" th:action="@{/registration/doctor}" th:object="${doctor}">
+                <div class="form-group">
+                    <label class="control-label" for="firstName">First Name</label>
+                    <input autofocus="autofocus " class="form-control" id="firstName" required th:field="*{firstName}"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="lastName">Last Name</label>
+                    <input autofocus="autofocus " class="form-control" id="lastName" required th:field="*{lastName}"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="email">E-mail</label>
+                    <input autofocus="autofocus " class="form-control" id="email" required th:field="*{email}"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="username">Username</label>
+                    <input autofocus="autofocus " class="form-control" id="username" required th:field="*{username}"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="password">Password</label>
+                    <input autofocus="autofocus " class="form-control" id="password" required th:field="*{password}"
+                           type="password"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="mobile">Mobile Number</label>
+                    <input autofocus="autofocus " class="form-control" id="mobile" required th:field="*{mobile}"/>
+                </div>
+                <div class="form-group">
+                    <button class="btr btn-success" type="submit">Register</button>
+                    <span> Already Registered? <a href="/" th:href="@{/login}">Login here</a> </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<!--</html>-->
+<!--</body>-->
+</html>

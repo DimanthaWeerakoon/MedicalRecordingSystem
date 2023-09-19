@@ -20,7 +20,6 @@ public class PatientServiceImpl implements PatientService {
     @Override
     public Patient save(PatientRequest patientRequest) {
         Patient patient = new Patient(patientRequest.getFirstName(), patientRequest.getLastName(), patientRequest.getEmail(), patientRequest.getUsername(), patientRequest.getPassword(), patientRequest.getAge(), patientRequest.getGender(), patientRequest.getMobile(), patientRequest.getCity());
-
         return patientRepository.save(patient);
     }
 }

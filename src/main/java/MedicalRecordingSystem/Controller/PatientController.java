@@ -17,23 +17,24 @@ public class PatientController {
 
     @Autowired
     public PatientController(PatientService patientService) {
-        super();
         this.patientService = patientService;
     }
 
     @ModelAttribute("patient")
     public PatientRequest patientRequest() {
+
         return new PatientRequest();
     }
 
-    @GetMapping
+    @GetMapping("/patient")
     public String showRegistrationForm() {
-        return "registration";
+
+        return "registrationPatient";
     }
 
-    @PostMapping
+    @PostMapping("/patient")
     public String registerPatientAccount(@ModelAttribute("patient") PatientRequest patientRequest) {
         patientService.save(patientRequest);
-        return "redirect:/registration?success";
+        return "redirect:/registrationPatient?success";
     }
 }

@@ -33,7 +33,7 @@ public class DoctorController {
     @PostMapping("/doctor")
     public String registerDoctorAccount(@ModelAttribute("doctor") DoctorRequest doctorRequest){
         doctorService.save(doctorRequest);
-        return "redirect:/registrationDoctor?success";
+        return "redirect:/registration/doctor?success";
     }
 
 }

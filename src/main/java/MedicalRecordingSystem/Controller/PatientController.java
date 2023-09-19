@@ -35,6 +35,6 @@ public class PatientController {
     @PostMapping("/patient")
     public String registerPatientAccount(@ModelAttribute("patient") PatientRequest patientRequest) {
         patientService.save(patientRequest);
-        return "redirect:/registrationPatient?success";
+        return "redirect:/registration/patient?success";
     }
 }

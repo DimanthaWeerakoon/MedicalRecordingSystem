@@ -15,5 +15,6 @@ public class PatientRequest {
     private String gender;
     private String mobile;
     private String city;
+    private String role;
 
 }

@@ -33,14 +33,16 @@ public class Doctor {
     private String language;
     private String qualifications;
     private String reminders;
+    private String role;
 
-    public Doctor(String firstName, String lastName, String email, String username, String password, String mobile) {
+    public Doctor(String firstName, String lastName, String email, String username, String password, String mobile, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.username = username;
         this.password = password;
         this.mobile = mobile;
+        this.role = role;
     }
 
     public Doctor() {

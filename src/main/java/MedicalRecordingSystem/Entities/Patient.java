@@ -25,9 +25,10 @@ public class Patient {
     private String city;
     private String userPhoto;
     private String records;
+    private String role;
 
 
-    public Patient(String firstName, String lastName, String email, String username, String password, String age, String gender, String mobile, String city) {
+    public Patient(String firstName, String lastName, String email, String username, String password, String age, String gender, String mobile, String city, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -37,6 +38,7 @@ public class Patient {
         this.gender = gender;
         this.mobile = mobile;
         this.city = city;
+        this.role= role;
     }
 
 
